@@ -1,6 +1,8 @@
 package com.nssu.nhlifeship.scala
+
 import org.apache.spark.{SparkConf, SparkContext}
 import com.nssu.nhlifeship.scala.Constants._
+
 /**
   * @project NHLifeShip
   * @author wshid
@@ -21,19 +23,20 @@ object statisticGPS {
     val splitedRDD = rdd.map(line => line.split(","))
 
     val keyValueRDD = splitedRDD.map(line => {
-      val key : String = line(0)
-      val values = (line(4).trim.toInt, line(5).trim.toInt)
-      (key, values)
+      val key: String = line(0).substring(0,line(0).length - 5) + "역"
+      val value = line(4).trim.toInt + line(5).trim.toInt
+      (key, value)
 
     })
 
-    val reducedRDD = keyValueRDD.reduceByKey((a,b) => (a._1 + b._1, a._2 + b._2))
+    val reducedRDD = keyValueRDD.reduceByKey(_+_).sortBy(-_._2)
 
-    for( i <- reducedRDD.collect()){
+    for (i <- reducedRDD.collect()) {
       println(i._1, i._2)
     }
 
-    reduced
+
+
 
 
     // 각 역사별 이용자 수 합계를 구한다.
