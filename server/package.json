@@ -1,0 +1,24 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Nssu Description",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nssu/NHLifeShip.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nssu/NHLifeShip/issues"
+  },
+  "homepage": "https://github.com/Nssu/NHLifeShip#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "mysql": "^2.15.0",
+    "querystring": "^0.2.0"
+  }
+}
