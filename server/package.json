@@ -18,6 +18,8 @@
   "homepage": "https://github.com/Nssu/NHLifeShip#readme",
   "dependencies": {
     "cors": "^2.8.4",
+    "date-utils": "^1.2.21",
+    "fs": "0.0.1-security",
     "mysql": "^2.15.0",
     "querystring": "^0.2.0"
   }
