@@ -25,7 +25,7 @@ filebeat.prospectors:
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
-    - ../server/raw_data/dummy_v2/userPoint_v2.tsv
+    - ../server/raw_data/dummy_v3/userPoint_v3.tsv
     #- /var/log/*.log
     #- c:\programdata\elasticsearch\logs\*
 
